@@ -39,6 +39,9 @@ function updateStatus() {
     statusText.innerText = isOpen ? "Aberto" : "Fechado";
 }
 
+// Atualizar data e hora a cada minuto
+setInterval(updateStatus, 60000);
+
 // Ações ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     updateStatus();
